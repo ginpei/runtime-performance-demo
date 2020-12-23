@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+.ui-container {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 320px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: min(100%, 800px);
+}
