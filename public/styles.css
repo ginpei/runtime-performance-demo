@@ -9,5 +9,77 @@ body {
   min-width: 320px;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: min(100%, 800px);
+  width: min(100%, 600px);
+}
+
+.util-text-right {
+  text-align: right;
+}
+
+/* PostForm */
+.PostForm {
+  display: grid;
+  grid-column: 300px 2em;
+  margin-bottom: 1rem;
+}
+
+.PostForm-text {
+  height: 3rem;
+}
+
+.PostForm-submit {
+  width: 10em;
+}
+
+/* Message */
+.Message {
+  border-color: gray;
+  border-style: solid solid none;
+  border-width: 1px;
+  padding: 1rem;
+  position: relative;
+}
+.Message:last-child {
+  border-bottom-style: solid;
+}
+
+.Message-starContainer {
+  position: relative;
+  text-align: right;
+}
+
+/* TwinkleStar */
+.TwinkleStar {
+  background-color: snow;
+  border: 1px solid gray;
+}
+.TwinkleStar[data-liked="true"] {
+  background-color: gold;
+}
+
+.TwinkleStar[data-liked="true"] .TwinkleStar-scale {
+  animation: liked-scale 1s;
+  display: inline-block;
+}
+
+.TwinkleStar[data-liked="true"] .TwinkleStar-rotate {
+  animation: liked-rotate 1s;
+  display: inline-block;
+}
+
+@keyframes liked-scale {
+  0% { transform: scale(1); }
+  30% { transform: scale(3); }
+  50% { transform: scale(0.7); }
+  60% { transform: scale(0.7); }
+  70% { transform: scale(2); }
+  80% { transform: scale(0.9); }
+  90% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+@keyframes liked-rotate {
+  0% { transform: rotate(0); }
+  50% { transform: rotate(calc(360deg * 2)); }
+  100% { transform: rotate(calc(360deg * 2)); }
 }
